@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio sobre viajar a Madrid">
+    <meta name="author" content="Tu Nombre">
+<meta name="keywords" content="Madrid, Viajar, Turismo, España, Cultura">
+<meta name="robots" content="index, follow">
+    <title>Viaje a Madrid</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="JS/script.js">
+</head>
+<body>
+    
+    <header>
+        <h1>¡Bienvenidos a Madrid!</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#about">Sobre Madrid</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#gallery2">Galería 2</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#map">Ubicacion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about" class="animate">
+            <h2>Sobre la ciudad</h2>
+            <p>Madrid es la capital de España, conocida por su cultura, historia y arquitectura increíble.</p>
+            <img src="images/puerta_sol.jpeg" alt="Puerta del Sol" style="width: 100%; max-width: 600px; margin: 20px auto; display: block;">
+            <button class="btn-explore">Explorar más</button>
+        </section>
+        
+        <section id="gallery" class="animate">
+            <h2>Galería de Madrid</h2>
+            <div class="gallery">
+                <img src="images/palacio_real.jpg" alt="Palacio Real">
+                <img src="images/parque_retiro.jpg" alt="Parque del Retiro">
+                <img src="images/plaza_mayor.jpg" alt="Plaza Mayor">
+            </div>
+        </section>
+        <section id="activities" class="animate">
+            <h2>Actividades y Lugares Destacados</h2>
+            <div class="activity">
+                <img src="images/parque_retiro.jpg" alt="Parque del Retiro">
+                <div class="activity-info">
+                    <h3>Parque del Retiro</h3>
+                    <p>Un oasis verde en el corazón de Madrid, ideal para pasear, remar en el lago y disfrutar de su naturaleza.</p>
+                </div>
+            </div>
+            <div class="activity">
+                <img src="images/palacio_real.jpg" alt="Palacio Real">
+                <div class="activity-info">
+                    <h3>Palacio Real</h3>
+                    <p>La residencia oficial de los reyes de España, rica en historia y arquitectura majestuosa.</p>
+                </div>
+            </div>
+            <div class="activity">
+                <img src="images/puerta_sol.jpeg" alt="Puerta del Sol">
+                <div class="activity-info">
+                    <h3>Puerta del Sol</h3>
+                    <p>Un lugar icónico en Madrid, famoso por ser el punto de encuentro y el kilómetro cero de España.</p>
+                </div>
+            </div>
+        </section>
+        <section id="gallery2" class="gallery">
+            <h2>Galería de Madrid</h2>
+            <div class="grid-container">
+                <img src="images/puerta_sol.jpeg" alt="Puerta del Sol">
+                <img src="images/palacio_real.jpg" alt="Palacio Real">
+                <img src="images/parque_retiro.jpg" alt="Parque del Retiro">
+                <img src="images/museo_prado.jpg" alt="Museo del Prado">
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contáctanos</h2>
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="72a2921b-3e6a-45f0-b8f3-356332893167">
+                <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="action-button">Enviar</button>
+                <p>¿Tienes preguntas sobre Madrid? ¡Contáctanos!</p>
+    <button class="action-button">¡Escríbenos ahora!</button>
+            </form>
+        </section>
+        
+        <section id="map">
+            <h2>Ubicación</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24310.50601512194!2d-3.703790974422059!3d40.416775374763274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42289c6c335c23%3A0xd4d6d8984e7392!2sMadrid!5e0!3m2!1ses!2ses!4v1635521139358!5m2!1ses!2ses" 
+                width="1000" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </section>  
+    </main>
+    <footer>
+        <p>&copy; 2025 Viaje a Madrid</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Modal" src="images/">
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
